@@ -34,5 +34,56 @@ public class Jogos {
 	@ManyToOne
 	@JsonIgnoreProperties("jogos")
 	private Jogos categorias;
-	// categoria int
+	
+	@ManyToOne
+	@JsonIgnoreProperties("jogos")
+	private Jogos usuario;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getFaixa_etaria() {
+		return faixa_etaria;
+	}
+
+	public void setFaixa_etaria(int faixa_etaria) {
+		this.faixa_etaria = faixa_etaria;
+	}
+
+	public Jogos getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Jogos categorias) {
+		this.categorias = categorias;
+	}
+
+	public Jogos getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Jogos usuario) {
+		this.usuario = usuario;
+	}
 }
